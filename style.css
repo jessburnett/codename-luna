@@ -1,0 +1,36 @@
+body { align-items: center; }
+
+nav {
+	/* add color branding from gigya */
+	background: rgb(32, 91, 167);
+	min-height: 55px;
+	height: 250px;
+	display: flex;
+	color: white;
+	padding: 1em;
+}
+
+
+h1, h2, h3, h4, i { color: rgb(32, 91, 167); }
+
+
+#loginDiv {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container { justify-content: center; }
+
+
+
+/* utility classes for negative spacing */
+.mt-n-10 { margin-top: -10%; }
+
+
+@media only screen and (max-width: 600px) {
+	nav {
+		height: 55px;
+	}
+	.mt-n-10 { margin-top: -5%; }
+}

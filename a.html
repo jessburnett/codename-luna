@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<title>Gigya Test</title>
+
+		<!-- The following script directive is included for your convenience -->
+		<!-- socialize.js script should only be included once -->
+		<script type="text/javascript" src="http://cdn.gigya.com/js/socialize.js?apiKey=2_Y82PzwJ_chSFImHXaIDJClnLyJzmk-VFOavSsaNTzl6m901s_NNxRAS0xJ3bd3_N"></script>
+
+		<!-- implement material design lite for ui-->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+		<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+		<!-- custom style layer -->
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<!-- <p><input type="button" onclick="window.location='b.html?nickname=My Nickname&loginProvider=Button'; return false;" value="Login"></p>
+		<p>
+		Login with a social network provider:
+		<br>(That's part of your mission) -->
+			<!-- YOUR MISSION:
+				Run these pages with your favorite web server.
+				
+				Tip: call up the page using localhost as the domain (this will allow the Gigya API key to work properly):
+				http://localhost/.../a.html
+				
+				1) Add the Gigya login component showLoginUI within a container
+				2) After authentication, redirect to b.html
+				3) Bonus points: from the authentication response, if email is not
+				   present in the User object, prompt the user to enter an email, then
+				   redirect to b.html (no need to persist email, just ask for it)
+				   (hint: you will need to use addEventHandlers for the onLogin event)
+				4) Bonus-bonus points: show some kind of counter or flag indicating how
+				   many times the user has logged in (e.g., use a cookie or database).
+				   (You can use whatever server-side or client-side implementation you want)
+			
+		</p>-->
+		<nav>Gigya Challenge</nav>
+
+		<div class="container mdl-grid mt-n-10">
+         <div class="mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800">
+
+        <div class="mdl-card__title ">
+          <h3>
+            <i class="material-icons m-r-5 lh-13">account_circle</i>
+            Login With Your Provider
+          </h3>
+        </div>
+        <div id="loginDiv" class="p-l-20 p-r-20 p-b-20"></div>
+
+	    <br />
+	    <br /><br /><br />
+	    <h4>Click the button below to sign out from Gigya platform:</h4><br /><br />
+	    <input id="btnLogout" type="button" value="Sign Out"
+	            onclick="logoutFromGS()"/>
+	    <br />
+	    <br />
+	    <div id="status"></div>
+	</div>
+	</body>
+	<script type="text/javascript" src="script.js"></script>
+	<script>
+	    onLoad();
+	</script>
+</html>
