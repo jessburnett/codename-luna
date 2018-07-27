@@ -15,11 +15,30 @@
 		        }
 
 	        	gigya.socialize.showLoginUI(params);
-
+	        	
 	        }
 
+			function checkEmail(response) { 
+			    if ( response.errorCode == 0 ) {            
+			        var user = response['user'];
+			        var email = 'User '+user['email'];
+
+                    if(email === ' '){
+                    	console.log('email empty');
+                    } 
+                    else{
+			        	console.log(email);
+			    	}
+			    }
+			    else {
+			        console.log('Error :' + response.errorMessage);
+			    } 
+			}
+			 
+		    gigya.socialize.getUserInfo({callback:checkEmail});	
+
 	        // onLogin Event handler
-	        function onLoginHandler(eventObj, params) {
+	        function onLoginHandler(eventObj) {
 	            alert(eventObj.context.str + ' ' + eventObj.eventName + ' to ' + eventObj.provider
 	                + '!\n' + eventObj.provider + ' user ID: ' +  eventObj.user.identities[eventObj.provider].providerUID);
 	            // verify the signature ...
