@@ -1,15 +1,13 @@
 	        // This method is activated when the page is loaded
 	        function onLoad() {
-
-
 	            //setup params obj then pass to showLoginUI
 
-	    
 				var params = {
-					version: 2
-		            ,height: 'auto'
+					buttonsStyle: 'fullLogoColored'
+					,version: 2
+		            ,height: '250px'
 		            ,width: '100%'
-		            ,showTermsLink:false // remove 'Terms' link
+		            ,showTermsLink: true //remove 'Terms' link
 		            ,showWhatsThis: true // Pop-up a hint describing the Login Plugin, when the user rolls over the Gigya link.
 		            ,containerID: 'loginDiv' // The component will embed itself inside the loginDiv Div
 		            ,cid:''
@@ -26,6 +24,8 @@
 	                + '!\n' + eventObj.provider + ' user ID: ' +  eventObj.user.identities[eventObj.provider].providerUID);
 	            // verify the signature ...
 	            verifyTheSignature(eventObj.UID, eventObj.timestamp, eventObj.signature);
+
+
 	            // Check whether the user is new by searching if eventObj.UID exists in your database
 	            var newUser = true; // lets assume the user is new
 	             
