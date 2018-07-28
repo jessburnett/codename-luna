@@ -27,25 +27,24 @@
 		</div>
 	</nav>
 	<main>
-		<div id="loggedInfo" class="centerDiv">
+		<div class="container mdl-grid">
+			<div id="loggedInfo" class="mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-card">
 			<p>
 				Welcome, <span id="nickname"></span>!
 				<br> You authenticated with
 				<span id="loginProvider"></span>
-				<br>Number of connections to the system: <span id="loginCounter"></span>
-				<div id="loginCounter" class="material-icons mdl-badge mdl-badge--overlap" data-badge="loginCounter">account_box</div>
+				<br>Number of connections to the system: <span id="loginCounter"></span>	
 			</p>
-		</div>
-
-		<div id="connectionsDiv" class="centerDiv mediaButtons"></div>
-		<div class="centerDiv">
-			<button id="samplePostBtn" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect" onclick="publishAction()">
-  Share Your Experience
-</button>
-			<!-- <input id="samplePostBtn" class="button" type="button" value="Share your experience" onclick="publishAction()" /> -->
-		</div>
-		<div class="centerDiv">
-			<span id="status"></span>
+			<div id="connectionsDiv" class="centerDiv mediaButtons"></div>
+			<div>
+				<button id="samplePostBtn" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect" onclick="publishAction()">
+	  				Share
+				</button>
+			</div>
+			<div>
+				<span id="status"></span>
+			</div>
+			</div>
 		</div>
 	</main>
 	

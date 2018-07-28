@@ -28,6 +28,7 @@ function initializeData() {
 
     let loginCounter = getCookie("loginCounter");
     document.getElementById('loginCounter').innerHTML = loginCounter ? loginCounter : 0;
+
 }
 
 function logoutFromGS() {
