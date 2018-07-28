@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<title>Gigya Test</title>
+	<script type="text/javascript" src="http://cdn.gigya.com/js/socialize.js?apiKey=2_Y82PzwJ_chSFImHXaIDJClnLyJzmk-VFOavSsaNTzl6m901s_NNxRAS0xJ3bd3_N"></script>
+	
+		<!-- implement material design lite for ui-->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.4.2/dialog-polyfill.min.css">
+	
+	<!-- custom layer -->
+	<link rel="stylesheet" type="text/css" href="content/style.css">
+</head>
+
+<body>
+	<nav class="mdl-shadow--4dp">
+		<div>
+			<a href="https://gigya.com"><img src="content/images/logo.png" alt="gigya-logo"/></a>
+			<a href="https://developer.gigya.com">Documentation</a>
+		</div>
+		<div>
+			<i class="material-icons">account_circle</i>
+			<a id="btnLogout" onclick="logoutFromGS()">Logout</a>
+		</div>
+	</nav>
+	<main>
+		<div id="loggedInfo" class="centerDiv">
+			<p>
+				Welcome, <span id="nickname"></span>!
+				<br> You authenticated with
+				<span id="loginProvider"></span>
+				<br>Number of connections to the system: <span id="loginCounter"></span>
+				<div id="loginCounter" class="material-icons mdl-badge mdl-badge--overlap" data-badge="loginCounter">account_box</div>
+			</p>
+		</div>
+
+		<div id="connectionsDiv" class="centerDiv mediaButtons"></div>
+		<div class="centerDiv">
+			<button id="samplePostBtn" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect" onclick="publishAction()">
+  Share Your Experience
+</button>
+			<!-- <input id="samplePostBtn" class="button" type="button" value="Share your experience" onclick="publishAction()" /> -->
+		</div>
+		<div class="centerDiv">
+			<span id="status"></span>
+		</div>
+	</main>
+	
+	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.4.2/dialog-polyfill.min.js"></script>
+	<script type="text/javascript" src="js/cookieHandler.js"></script>
+	<script type="text/javascript " src="js/logged.js "></script>
+</body>
+
+</html>

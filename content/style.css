@@ -1,0 +1,55 @@
+body { align-items: center; }
+
+/* navigation */
+nav {
+	/* add color branding from gigya */
+	background: rgb(32, 91, 167);
+	max-height: 50px;
+	display: flex;
+	color: white;
+	padding: 1em 3em;
+}
+
+nav div { display: inline-flex; flex: 2; align-items: center; }
+
+nav div a img { padding-right: 2em;  }
+
+nav div:nth-child(2){ justify-content: flex-end; }
+
+nav div i { color: white; }
+
+#btnLogout { cursor: pointer;  }
+
+/* topography */
+h1, h2, h3, h4, h5, h6, i { color: rgb(32, 91, 167); display: inline-flex; }
+i {  padding: 0 5px; }
+
+/* loginDiv */
+#loginDiv {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container { justify-content: center; }
+
+.gigya-login-footer {  margin: 1em!important; }
+
+.mdl-card {  width: 35%; padding-bottom: 3em; margin-top: 2em;}
+
+
+
+/* media queries to cleanup layout md  */
+@media only screen and (max-width: 900px) {	
+	.mdl-card {
+    	width: 75%;
+    	padding-bottom: 2em;
+	}
+}
+
+@media only screen and (max-width: 500px) {	
+	nav { padding: 1em; }
+
+	nav div a img { width: 80%; padding-right: 1em;  }
+}
