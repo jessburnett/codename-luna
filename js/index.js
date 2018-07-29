@@ -1,6 +1,7 @@
 function onLoad() {
     gigya.socialize.addEventHandlers({
-        onLogin: onLoginHandler
+        onLogin: onLoginHandler,
+        onConnectionAdded: completeEmailInfo
     });
 
     const params = {
@@ -37,7 +38,7 @@ function loginCounter() {
 function completeEmailInfo(eventObj) {
     if (!eventObj.user.email) {
         const emailInfo = prompt("Please enter your email");
-        // TODO: store the email in gigya's component or server side.
+        console.log(eventObj + 'completeEmailInfo func');
     }
 }
 

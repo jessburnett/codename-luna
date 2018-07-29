@@ -32,9 +32,7 @@ nav div i { color: white; }
 h1, h2, h3, h4, h5, h6, i { color: rgb(32, 91, 167); display: inline-flex; }
 i {  padding: 0 5px; }
 
-a { color: white;  }
-
-button { background: rgb(32, 91, 167)!important; }
+a { color: white; text-decoration: none;  }
 
 
 /* loginDiv */
@@ -62,6 +60,7 @@ button { background: rgb(32, 91, 167)!important; }
 
 .button-row div { margin: 0 1em;  }
 
+.button-row div button { background: rgb(32, 91, 167)!important; }
 
 
 /* media queries to cleanup layout md  */
@@ -76,4 +75,10 @@ button { background: rgb(32, 91, 167)!important; }
 	nav { padding: 1em; }
 
 	nav div a img { width: 80%; padding-right: 1em;  }
+
+	h5 {
+    	font-size: 12px;
+    	margin: 0px;
+    	padding: 0px;		
+	}
 }

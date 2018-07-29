@@ -4,7 +4,7 @@ dependencies:
  - npm
  - express
 
-from sample directory:
+From sample directory:
 - run: npm install
 - run: npm start node server.js
 
@@ -13,7 +13,7 @@ Open localhost on port 8083
 * feel free to modify this if that port is
 * being used on your system
 
-
+Using cookieHandler.js
 
 Design/UX choices:
 - Added in some Gigya branding: 
