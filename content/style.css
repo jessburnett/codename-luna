@@ -1,4 +1,12 @@
-body { align-items: center; }
+body { 
+	align-items: center; 
+	background-image: url(images/wallpaper.jpg);
+	background-size: cover;
+    background-attachment: fixed;
+
+}
+
+
 
 /* navigation */
 nav {
@@ -23,6 +31,10 @@ nav div i { color: white; }
 /* topography */
 h1, h2, h3, h4, h5, h6, i { color: rgb(32, 91, 167); display: inline-flex; }
 i {  padding: 0 5px; }
+
+a { color: white;  }
+
+button { background: rgb(32, 91, 167)!important; }
 
 
 /* loginDiv */
