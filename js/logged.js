@@ -45,10 +45,10 @@ function publishAction() {
 
     act.setTitle("Post title");
     act.setSubtitle("Post subtitle");
-    act.setLinkBack("http://bit.ly/5MFb2V");
-    act.setDescription("This is my post Description.");
-    act.addActionLink("Read More", "http://bit.ly/5MFb2V");
-    act.setUserMessage("This is my sample message.");
+    act.setLinkBack("https://jessicaburnett.tech");
+    act.setDescription("This is post Description.");
+    act.addActionLink("Read More", "https://jessicaburnett.tech");
+    act.setUserMessage("This sample message shared.");
 
     var params =
         {
