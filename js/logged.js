@@ -22,14 +22,17 @@ function initializeData() {
         var ret = urlParams[i].toString().split("=");
         urlParamsArr[ret[0]] = decodeURIComponent(ret[1]);
     }
-
+    var profilePictureURL = urlParamsArr.photoURL;
     document.getElementById('nickname').innerHTML = urlParamsArr["nickname"];
     document.getElementById('loginProvider').innerHTML = urlParamsArr["loginProvider"];
+    document.getElementById('profilePicture').setAttribute("href", profilePictureURL);
+
 
     let loginCounter = getCookie("loginCounter");
     document.getElementById('loginCounter').innerHTML = loginCounter ? loginCounter : 0;
 
 }
+
 
 function logoutFromGS() {
     gigya.socialize.logout();

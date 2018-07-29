@@ -46,7 +46,6 @@ a { color: white; text-decoration: none;  }
 /* loggedInfo */
 #loggedInfo * { text-align: center; }
 
-
 .container { justify-content: center; }
 
 .gigya-login-footer {  margin: 1em!important; }
@@ -71,6 +70,8 @@ a { color: white; text-decoration: none;  }
 	}
 }
 
+
+/* media queries to cleanup layout sm */
 @media only screen and (max-width: 500px) {	
 	nav { padding: 1em; }
 
@@ -82,3 +83,6 @@ a { color: white; text-decoration: none;  }
     	padding: 0px;		
 	}
 }
+
+.hide { display: none; }
+.show { display: flex; }
