@@ -26,12 +26,19 @@ nav div:nth-child(2){ justify-content: flex-end; }
 
 nav div i { color: white; }
 
+#avatar {
+	margin-right: 10px;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
 #btnLogout { cursor: pointer;  }
 
 /* topography */
 h1, h2, h3, h4, h5, h6, i { color: rgb(32, 91, 167); display: inline-flex; }
 i {  padding: 0 5px; }
-
 a { color: white; text-decoration: none;  }
 
 
@@ -48,6 +55,11 @@ a { color: white; text-decoration: none;  }
 
 .container { justify-content: center; }
 
+.mdl-button--raised.mdl-button--colored,.mdl-badge[data-badge]:after { background: rgb(32, 91, 167); }
+
+#badgeCounter { margin: 1em 0; }
+
+
 .gigya-login-footer {  margin: 1em!important; }
 
 .mdl-card {  width: 35%; padding: 3em; margin-top: 2em; align-items: center;}
@@ -60,6 +72,10 @@ a { color: white; text-decoration: none;  }
 .button-row div { margin: 0 1em;  }
 
 .button-row div button { background: rgb(32, 91, 167)!important; }
+
+/* email dialog overrides */
+dialog h6 { text-align: center;  }
+.mdl-button--raised.mdl-button--colored:hover {  background: rgb(7, 62, 134); }
 
 
 /* media queries to cleanup layout md  */
@@ -85,4 +101,4 @@ a { color: white; text-decoration: none;  }
 }
 
 .hide { display: none; }
-.show { display: flex; }
+.show { display: block; }

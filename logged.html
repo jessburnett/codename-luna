@@ -25,8 +25,8 @@
 			<a href="https://developer.gigya.com">Documentation</a>
 		</div>
 		<div>
-			<img id="profilePicture" alt="profile picture" href/>
-			<i class="material-icons">account_circle</i>
+			<i id="noAvatar" class="material-icons hide">account_circle</i>
+			<img id="avatar" class="show" alt="avatar img"/>
 			<a id="btnLogout" onclick="logoutFromGS()">Logout</a>
 		</div>
 	</nav>
@@ -35,9 +35,11 @@
 			<div id="loggedInfo" class="mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-card">
 			<div>
 				<p>Welcome, <span id="nickname"></span>!</p>
-				<br> You authenticated with
-				<span id="loginProvider"></span>
-				<p><br>Number of connections to the system: <span id="loginCounter"></span></p>
+				<p> You authenticated with
+					<span id="loginProvider"></span>
+				</p>
+				<p>Number of connections to the system:</p>
+				<div id="badgeCounter" class="material-icons mdl-badge mdl-badge--overlap" data-badge="">account_box</div>
 			</div>
 			<div id="connectionsDiv" class="centerDiv mediaButtons"></div>
 			<div class="button-row">
@@ -59,6 +61,26 @@
 		</div>
 	</main>
 	
+	<dialog class="mdl-dialog">
+	   <h6>Sorry, we were unable to locate your email.
+	    Please enter it below.</h6>
+	    <div class="mdl-dialog__content">
+	       <form action="#">
+			  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			    <input class="mdl-textfield__input" type="email" id="emailInput">
+			    <!-- mdl out-of-box error init during user input -- this behavior is bad for user exp
+				using it as is without rewrite -->
+			    <label class="mdl-textfield__label" for="emailInput">Email...</label>
+			    <span class="mdl-textfield__error">Invalid email.</span>
+			  </div>
+		    </form>
+	    </div>
+	    <div class="mdl-dialog__actions">
+	    	<button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">Submit</button>
+	      <button id="cancel" type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">Cancel</button>
+	    </div>
+	</dialog>
+
 	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.4.2/dialog-polyfill.min.js"></script>
 	<script type="text/javascript" src="js/cookieHandler.js"></script>

@@ -34,12 +34,4 @@ function loginCounter() {
     setCookie("loginCounter", loginCounter, 30);
 }
 
-function completeEmailInfo(eventObj) {   
-    if (!eventObj.user.email) {
-        const emailInfo = prompt("Please enter your email");     
-    }else{
-        alert(eventObj.user.email + ' email good');
-    }
-}
-
 onLoad();
