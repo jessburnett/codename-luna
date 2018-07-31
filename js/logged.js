@@ -57,7 +57,6 @@ function initializeData() {
         }
     });
 
-    console.log(userEmail + " user email");
     if(userEmail === 'undefined' || !userEmail){
         dialog.showModal();
     }

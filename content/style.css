@@ -3,44 +3,40 @@ body {
 	background-image: url(images/wallpaper.jpg);
 	background-size: cover;
     background-attachment: fixed;
-
 }
-
 
 
 /* navigation */
 nav {
-	/* add color branding from gigya */
-	background: rgb(32, 91, 167);
-	max-height: 50px;
-	display: flex;
-	color: white;
-	padding: 1em 3em;
+    display: flex;
+    color: white;
+    padding: 1em 0em;
 }
 
-nav div { display: inline-flex; flex: 2; align-items: center; }
+.avatarWrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
-nav div a img { padding-right: 2em;  }
-
-nav div:nth-child(2){ justify-content: flex-end; }
-
-nav div i { color: white; }
-
-#avatar {
-	margin-right: 10px;
+#avatar, #noAvatar {
     vertical-align: middle;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
+    margin-bottom: 1em;
 }
 
 #btnLogout { cursor: pointer;  }
 
 /* topography */
-h1, h2, h3, h4, h5, h6, i { color: rgb(32, 91, 167); display: inline-flex; }
+h1, h2, h3, h4, h5, h6, i { color: rgb(32, 91, 167); display: inline-flex; justify-content: center; }
 i {  padding: 0 5px; }
+header i { color: white;  }
 a { color: white; text-decoration: none;  }
 
+
+main { justify-content: space-between; }
 
 /* loginDiv */
 #loginDiv {
@@ -51,14 +47,107 @@ a { color: white; text-decoration: none;  }
 }
 
 /* loggedInfo */
+/* side nav */
+.mdl-components__nav {
+    display: inline-block;
+    background: #fff;
+    width: 200px;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 24px 0;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    z-index: 1;
+}
+
 #loggedInfo * { text-align: center; }
 
-.container { justify-content: center; }
+.container.logged {
+	display: flex;
+	flex: 1;
+	justify-content: center;
+	align-items: center;
+}
+
+/* custom header */
+.mdl-layout__drawer-right {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    width: 240px;
+    height: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+    box-sizing: border-box;
+    border-right: 1px solid #e0e0e0;
+    background: #fafafa;
+    -webkit-transform: translateX(250px);
+    -ms-transform: translateX(250px);
+    transform: translateX(250px);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    will-change: transform;
+    -webkit-transition-duration: .2s;
+    transition-duration: .2s;
+    -webkit-transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    -webkit-transition-property: -webkit-transform;
+    transition-property: transform;
+    color: #424242;
+    overflow: visible;
+    overflow-y: auto;
+    z-index: 5;
+}
+
+.active {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);  
+}
+
+.mdl-layout__obfuscator-right {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 4;
+    visibility: hidden;
+    -webkit-transition-property: background-color;
+    transition-property: background-color;
+    -webkit-transition-duration: .2s;
+    transition-duration: .2s;
+    -webkit-transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+}
+
+.mdl-layout__drawer-right.active~.mdl-layout__obfuscator-right {
+    background-color: rgba(0,0,0,.5);
+    visibility: visible;
+}
+
+.mdl-layout__drawer-right>.mdl-layout-title {
+    line-height: 56px;
+    padding-left: 16px;
+}
 
 .mdl-button--raised.mdl-button--colored,.mdl-badge[data-badge]:after { background: rgb(32, 91, 167); }
 
 #badgeCounter { margin: 1em 0; }
-
 
 .gigya-login-footer {  margin: 1em!important; }
 
@@ -77,6 +166,20 @@ a { color: white; text-decoration: none;  }
 dialog h6 { text-align: center;  }
 .mdl-button--raised.mdl-button--colored:hover {  background: rgb(7, 62, 134); }
 
+.hide { display: none; }
+.show { display: block; }
+.reset {
+	margin: 0;
+	padding: 0;
+}
+
+.center {
+	justify-content: center;
+	align-content: center;
+}
+
+.p-t-5 { padding-top: 5em;  }
+
 
 /* media queries to cleanup layout md  */
 @media only screen and (max-width: 900px) {	
@@ -89,16 +192,11 @@ dialog h6 { text-align: center;  }
 
 /* media queries to cleanup layout sm */
 @media only screen and (max-width: 500px) {	
-	nav { padding: 1em; }
-
-	nav div a img { width: 80%; padding-right: 1em;  }
-
 	h5 {
     	font-size: 12px;
     	margin: 0px;
     	padding: 0px;		
 	}
-}
 
-.hide { display: none; }
-.show { display: block; }
+	.p-t-5 { padding-top: 2em;  }
+}

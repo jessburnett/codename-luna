@@ -3,7 +3,7 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-	<title>Gigya Test</title>
+	<title>Gigya Sample</title>
 	<script type="text/javascript" src="http://cdn.gigya.com/js/socialize.js?apiKey=2_Y82PzwJ_chSFImHXaIDJClnLyJzmk-VFOavSsaNTzl6m901s_NNxRAS0xJ3bd3_N"></script>
 	
 		<!-- implement material design lite for ui-->
@@ -19,22 +19,42 @@
 </head>
 
 <body>
-	<nav class="mdl-shadow--4dp">
-		<div>
-			<a href="https://gigya.com"><img src="content/images/logo.png" alt="gigya-logo"/></a>
-			<a href="https://developer.gigya.com">Documentation</a>
-		</div>
-		<div>
-			<i id="noAvatar" class="material-icons hide">account_circle</i>
-			<img id="avatar" class="show" alt="avatar img"/>
-			<a id="btnLogout" onclick="logoutFromGS()">Logout</a>
-		</div>
-	</nav>
-	<main>
-		<div class="container mdl-grid">
+
+	<main class="container mdl-grid reset">
+	<!--custom header with sliding drawer -->
+	    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+	      <header class="mdl-layout__header">
+	        <div class="mdl-layout__header-row">
+	          <!-- Title -->
+	          <span class="mdl-layout-title">Welcome!</span>
+	          <!-- Add spacer, to align navigation to the right -->
+	          <div class="mdl-layout-spacer"></div>
+	          <!-- Navigation -->
+	          <a href="https://gigya.com"><img src="content/images/logo.png" alt="gigya-logo"/></a>
+	        </div>
+	      </header>
+	      <div class="mdl-layout__drawer">
+	        <h6>Hello, <span id="nickname"></span>!</h6>
+	        <nav class="mdl-navigation">
+	        	<div class="avatarWrapper">
+	        		<i id="noAvatar" class="material-icons hide">account_circle</i>
+	        	</div>
+	        	<div class="avatarWrapper">
+					<img id="avatar" class="show" alt="avatar img"/>
+				</div>
+	          	<a class="mdl-navigation__link" href="https://developer.gigya.com">Documentation</a>
+	          	<a class="mdl-navigation__link" onclick="logoutFromGS()">Logout</a>
+	        </nav>
+	    </div>
+      	<div class="mdl-layout__drawer-right">
+        	<span class="mdl-layout-title">Notifications</span>
+        </div>
+
+        <div class="mdl-layout__obfuscator-right"></div>
+
+		<div class="container logged">
 			<div id="loggedInfo" class="mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-card">
 			<div>
-				<p>Welcome, <span id="nickname"></span>!</p>
 				<p> You authenticated with
 					<span id="loginProvider"></span>
 				</p>
@@ -81,10 +101,32 @@
 	    </div>
 	</dialog>
 
+
 	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.4.2/dialog-polyfill.min.js"></script>
 	<script type="text/javascript" src="js/cookieHandler.js"></script>
 	<script type="text/javascript " src="js/logged.js "></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+
+	<script type="text/javascript">
+		$('#notif').click(function(){
+		    if($('.mdl-layout__drawer-right').hasClass('active')){       
+		        $('.mdl-layout__drawer-right').removeClass('active'); 
+		     }
+		     else{
+		        $('.mdl-layout__drawer-right').addClass('active'); 
+		     }
+		    });
+
+		    $('.mdl-layout__obfuscator-right').click(function(){
+		     if($('.mdl-layout__drawer-right').hasClass('active')){       
+		        $('.mdl-layout__drawer-right').removeClass('active'); 
+		     }
+		     else{
+		        $('.mdl-layout__drawer-right').addClass('active'); 
+		     }
+		});
+	</script>
 </body>
 
 </html>
